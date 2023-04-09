@@ -78,7 +78,7 @@ export default function Game(props) {
                                         <h3 style={{ color: "#DC2626" }}>No winner</h3>
                                         <button className="btnN" onClick={newGame}>
                                             {" "}
-                                            Nouvelle partie{" "}
+                                            Start Again{" "}
                                         </button>
                                     </>
                                 ) : null}
@@ -90,7 +90,7 @@ export default function Game(props) {
 
                     <div className="container">
                         <div className="text-column">
-                            <h1>WELCOME TO TIC TAC TOE GAME</h1>
+                            <h1 style={{marginTop:"60px"}}>WELCOME TO TIC TAC TOE GAME</h1>
                             <h5 style={{color:"white"}}>designed by AIT HAMMOU</h5>
                         </div>
                         <div className="buttons-column">

@@ -119,7 +119,7 @@ export default function ComputerPlayer() {
                     <>
                         <h3 style={{ color: "#e16666" }}>It's a Draw</h3>
                         <button className="btnN" onClick={newGame}>
-                            Nouvelle partie
+                            Start Again
                         </button>
                     </>
                 ) : null}
