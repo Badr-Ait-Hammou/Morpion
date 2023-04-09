@@ -57,7 +57,7 @@ export default function Game(props) {
                 {gameMode ? (
                     gameMode === "play-vs-computer" ? (
                         <div>
-                            <h3 style={{color:"white"}}>Player (x) vs computer (o) </h3>
+
                             <ComputerPlayer />
                         </div>
                     ) : (
@@ -74,7 +74,7 @@ export default function Game(props) {
                             ) : !values.includes("") ? (
                                 <>
                                     <h3 style={{color: "#DC2626"}} >No winner</h3>
-                                    <button className="btnN" onClick={newGame}>
+                                    <button className="btnN"  onClick={newGame}>
                                         {" "}
                                         Nouvelle partie{" "}
                                     </button>

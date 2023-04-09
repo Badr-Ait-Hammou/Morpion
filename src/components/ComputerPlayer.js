@@ -102,23 +102,29 @@ export default function ComputerPlayer() {
     };
 
     return (
-        <div>
-            <Board values={values} onClick={handleComputerMove} />
-            {win ? (
-                <>
-                    <h3 style={ {color: "#10B981" }}>Congrats {win} you are the winner </h3>
-                    <button className="btnN" onClick={newGame}>
-                        Nouvelle partie{" "}
-                    </button>
-                </>
-            ) : values.filter((val) => val === null).length === 0 && win === null ? (
-                <>
-                    <h1 style={{color: "#DC2626"}} >No winner</h1>
-                    <button className="btnN" onClick={newGame}>
-                        Nouvelle partie
-                    </button>
-                </>
-            ) : null}
+        <div style={{ display: "flex", flexDirection: "column", minHeight: "1vh" }}>
+            <div style={{ flex: 1, backgroundColor: "transparent", color: "white", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <h1>PLAY VS COMPUTER</h1>
+            </div>
+            <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
+                <Board values={values} onClick={handleComputerMove} />
+                {win ? (
+                    <>
+                        <h3 style={{ color: "#10B981" }}> {win} is the winner </h3>
+                        <button className="btnN" onClick={newGame}>
+                            Nouvelle partie{" "}
+                        </button>
+                    </>
+                ) : values.filter((val) => val === null).length === 0 && win === null ? (
+                    <>
+                        <h3 style={{ color: "#e16666" }}>It's a Draw</h3>
+                        <button className="btnN" onClick={newGame}>
+                            Nouvelle partie
+                        </button>
+                    </>
+                ) : null}
+            </div>
         </div>
+
     );
 }

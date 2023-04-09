@@ -9,6 +9,7 @@
   border: 2px solid #100f0f;
   background-color: rgba(255, 255, 255, 0.91);
   cursor: pointer;
+
 }
 
 .square:hover {
@@ -16,7 +17,7 @@
 }
 
 .square.x {
-  color: #f00;
+  color: #eac8c8;
 }
 
 .square.o {
@@ -89,7 +90,7 @@ body {
 
 .btnBack {
   all: unset;
-  width: 70px;
+  width: 200px;
   height: 30px;
   font-size: 26px;
   background: transparent;
@@ -99,14 +100,11 @@ body {
   cursor: grabbing;
   z-index: 1;
   padding: 10px 20px;
-  margin: 10px 20px 30px 40px;
+  margin-bottom: 20px;
   justify-content: center;
   display: flex;
-  align-items: center;
-  white-space: nowrap;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+
+
 }
 
 .btnBack::after,
@@ -195,7 +193,7 @@ div.result.red {
   height: calc(100% + 4px);
   animation: glowing-btnN 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 @keyframes glowing-btnN {
@@ -279,3 +277,4 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
