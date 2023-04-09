@@ -57,30 +57,34 @@ export default function Game(props) {
                 {gameMode ? (
                     gameMode === "play-vs-computer" ? (
                         <div>
-
                             <ComputerPlayer />
                         </div>
                     ) : (
-                        <div>
-                            <h3>Player ({turn})</h3>
-                            <Board values={values} onClick={onClick} />
-                            {win ? (
-                                <>
-                                    <h3 style={{color: "#10B981"}} > Congrats {win} you are the winner </h3>
-                                    <button className="btnN" onClick={newGame}>
-                                        Nouvelle partie{" "}
-                                    </button>
-                                </>
-                            ) : !values.includes("") ? (
-                                <>
-                                    <h3 style={{color: "#DC2626"}} >No winner</h3>
-                                    <button className="btnN"  onClick={newGame}>
-                                        {" "}
-                                        Nouvelle partie{" "}
-                                    </button>
-                                </>
-                            ) : null}
+                        <div style={{ display: "flex", flexDirection: "column", height: "1vh" }}>
+                            <div style={{ flex: 1, backgroundColor: "transparent", color: "white", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                <h1>Player ({turn})</h1>
+                            </div>
+                            <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
+                                <Board values={values} onClick={onClick} />
+                                {win ? (
+                                    <>
+                                        <h3 style={{ color: "#10B981" }}> Congrats {win} you are the winner </h3>
+                                        <button className="btnN" onClick={newGame}>
+                                            Nouvelle partie{" "}
+                                        </button>
+                                    </>
+                                ) : !values.includes("") ? (
+                                    <>
+                                        <h3 style={{ color: "#DC2626" }}>No winner</h3>
+                                        <button className="btnN" onClick={newGame}>
+                                            {" "}
+                                            Nouvelle partie{" "}
+                                        </button>
+                                    </>
+                                ) : null}
+                            </div>
                         </div>
+
                     )
                 ) : (
 
