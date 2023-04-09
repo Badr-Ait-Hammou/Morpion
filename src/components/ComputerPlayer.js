@@ -112,7 +112,7 @@ export default function ComputerPlayer() {
                     <>
                         <h3 style={{ color: "#10B981" }}> {win} is the winner </h3>
                         <button className="btnN" onClick={newGame}>
-                            Nouvelle partie{" "}
+                           Start Again {" "}
                         </button>
                     </>
                 ) : values.filter((val) => val === null).length === 0 && win === null ? (

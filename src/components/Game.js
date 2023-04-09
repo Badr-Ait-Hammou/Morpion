@@ -70,7 +70,7 @@ export default function Game(props) {
                                     <>
                                         <h3 style={{ color: "#10B981" }}> Congrats {win} you are the winner </h3>
                                         <button className="btnN" onClick={newGame}>
-                                            Nouvelle partie{" "}
+                                            Start Again{" "}
                                         </button>
                                     </>
                                 ) : !values.includes("") ? (
@@ -96,6 +96,7 @@ export default function Game(props) {
                         <div className="buttons-column">
                             <button
                                 className="btn"
+
                                 onClick={() => setGameMode("play-vs-computer")}
                             >
                                 Play vs Computer
@@ -105,7 +106,7 @@ export default function Game(props) {
                                 className="btn"
                                 onClick={() => setGameMode("play-vs-friend")}
                             >
-                                Play vs Friend
+                                Play vs a  Friend
                             </button>
                         </div>
 
