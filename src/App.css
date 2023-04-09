@@ -2,17 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
-  font-size: 48px;
+  width: 80px;
+  height: 80px;
+  font-size: 50px;
   font-weight: bold;
-  border: 1.5px solid #655f5f;
-  background-color: #fff;
+  border: 2px solid #100f0f;
+  background-color: rgba(126, 187, 252, 0.29);
   cursor: pointer;
 }
 
 .square:hover {
-  background-color: #eee;
+  background-color: rgba(74, 96, 248, 0.47);
 }
 
 .square.x {
