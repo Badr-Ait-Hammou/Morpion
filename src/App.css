@@ -23,17 +23,16 @@
   color: #00f;
 }
 .btn {
-  margin-top: 15vh;
-  padding: 0.6em 2em;
-  width: 200px;
-  border: none;
-  outline: none;
+  margin-top: 30px;
+  padding: 3em 2em;
+  width: 300px;
+
   color: rgb(255, 255, 255);
-  background: #111;
+  background: #c661e7;
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 15px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -41,16 +40,9 @@
 
 .btn:before {
   content: "";
-  background: linear-gradient(45deg,
-  #ff0000,
-  #ff7300,
-  #fffb00,
-  #48ff00,
-  #00ffd5,
-  #002bff,
-  #7a00ff,
-  #ff00c8,
-  #ff0000);
+  background: linear-gradient(400deg,
+  #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+  );
   position: absolute;
   top: -2px;
   left: -2px;
@@ -58,7 +50,7 @@
   z-index: -1;
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
+  width: calc(100% + 5px);
   height: calc(100% + 4px);
   animation: glowing-btn 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
@@ -85,7 +77,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: rgb(30, 28, 28);
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -93,20 +85,20 @@
 
 .btnBack {
   all: unset;
-  width: 50px;
-  height: 15px;
-  font-size: 16px;
+  width: 70px;
+  height: 30px;
+  font-size: 26px;
   background: transparent;
   border: none;
   position: relative;
-  color: #f0f0f0;
-  cursor: pointer;
+  color: #83e10f;
+  cursor: grabbing;
   z-index: 1;
   padding: 10px 20px;
   margin: 10px 20px 30px 40px;
+  justify-content: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   white-space: nowrap;
   user-select: none;
   -webkit-user-select: none;
@@ -127,25 +119,13 @@
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #28282d;
+  background: #100f0f;
   border-radius: 10px;
 }
 
-.btnBack::after {
-  transform: translate(10px, 10px);
-  width: 35px;
-  height: 35px;
-  background: #ffffff15;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: 50px;
-}
 
-.btnBack:hover::before {
-  transform: translate(5%, 20%);
-  width: 110%;
-  height: 110%;
-}
+
+
 
 .btnBack:hover::after {
   border-radius: 10px;
@@ -165,11 +145,11 @@ div.result {
 }
 
 div.result.green {
-  background-color: #5a5;
+  background-color: #15e015;
 }
 
 div.result.red {
-  background-color: #a55;
+  background-color: #f30606;
 }
 .btnN {
   margin-top: 3vh;
@@ -247,6 +227,7 @@ div.result.red {
 
 .App {
   text-align: center;
+  background: #282c34;
 }
 h2 {
   background-color: #282c34;
@@ -258,26 +239,38 @@ h2 {
   color: white;
   padding: 10px 16px;
 }
-/*
-@media (prefers-reduced-motion: no-preference) {
-  h2 {
-    animation: App-logo-spin infinite 2s linear;
-  }
+h1 {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(50px + 2vmin);
+  color: white;
+  padding: 10px 16px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(-3deg);
-  }
-  to {
-    transform: rotate(3deg);
-  }
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-*/
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
 }

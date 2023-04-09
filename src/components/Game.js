@@ -66,14 +66,14 @@ export default function Game(props) {
                             <Board values={values} onClick={onClick} />
                             {win ? (
                                 <>
-                                    <h1 style={{color: "#10B981"}} >🎉 {win} is the winner 🎉</h1>
+                                    <h1 style={{color: "#10B981"}} > Congrats {win} you are the winner </h1>
                                     <button className="btnN" onClick={newGame}>
                                         Nouvelle partie{" "}
                                     </button>
                                 </>
                             ) : !values.includes("") ? (
                                 <>
-                                    <h1 style={{color: "#DC2626"}} >No winner 🚫</h1>
+                                    <h1 style={{color: "#DC2626"}} >No winner</h1>
                                     <button className="btnN" onClick={newGame}>
                                         {" "}
                                         Nouvelle partie{" "}
@@ -83,21 +83,32 @@ export default function Game(props) {
                         </div>
                     )
                 ) : (
-                    <div>
-                        <button
-                            className="btn"
-                            onClick={() => setGameMode("play-vs-computer")}
-                        >
-                            Play vs Computer
-                        </button>
-                        <br />
-                        <button
-                            className="btn"
-                            onClick={() => setGameMode("play-vs-friend")}
-                        >
-                            Jouer vs Friend
-                        </button>
+
+                    <div className="container">
+                        <div className="text-column ">
+                            <h1>WELCOME TO TIC TAC TOE GAME</h1>
+                            <h5>designed by AIT HAMMOU</h5>
+                        </div>
+                        <div className="buttons-column">
+                            <button
+                                className="btn"
+                                onClick={() => setGameMode("play-vs-computer")}
+                            >
+                                Play vs Computer
+                            </button>
+                            <br />
+                            <button
+                                className="btn"
+                                onClick={() => setGameMode("play-vs-friend")}
+                            >
+                                Play vs Friend
+                            </button>
+                        </div>
+
                     </div>
+
+
+
                 )}
             </div>
         </div>
