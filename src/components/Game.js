@@ -57,23 +57,23 @@ export default function Game(props) {
                 {gameMode ? (
                     gameMode === "play-vs-computer" ? (
                         <div>
-                            <h1>Player (x) vs computer (o) </h1>
+                            <h3 style={{color:"white"}}>Player (x) vs computer (o) </h3>
                             <ComputerPlayer />
                         </div>
                     ) : (
                         <div>
-                            <h1>Player ({turn})</h1>
+                            <h3>Player ({turn})</h3>
                             <Board values={values} onClick={onClick} />
                             {win ? (
                                 <>
-                                    <h1 style={{color: "#10B981"}} > Congrats {win} you are the winner </h1>
+                                    <h3 style={{color: "#10B981"}} > Congrats {win} you are the winner </h3>
                                     <button className="btnN" onClick={newGame}>
                                         Nouvelle partie{" "}
                                     </button>
                                 </>
                             ) : !values.includes("") ? (
                                 <>
-                                    <h1 style={{color: "#DC2626"}} >No winner</h1>
+                                    <h3 style={{color: "#DC2626"}} >No winner</h3>
                                     <button className="btnN" onClick={newGame}>
                                         {" "}
                                         Nouvelle partie{" "}
@@ -85,9 +85,9 @@ export default function Game(props) {
                 ) : (
 
                     <div className="container">
-                        <div className="text-column ">
+                        <div className="text-column">
                             <h1>WELCOME TO TIC TAC TOE GAME</h1>
-                            <h5>designed by AIT HAMMOU</h5>
+                            <h5 style={{color:"white"}}>designed by AIT HAMMOU</h5>
                         </div>
                         <div className="buttons-column">
                             <button

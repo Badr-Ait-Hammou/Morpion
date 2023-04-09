@@ -106,14 +106,14 @@ export default function ComputerPlayer() {
             <Board values={values} onClick={handleComputerMove} />
             {win ? (
                 <>
-                    <h1 style={ {color: "#10B981" }}>🎉 {win} is the winner 🎉</h1>
+                    <h3 style={ {color: "#10B981" }}>Congrats {win} you are the winner </h3>
                     <button className="btnN" onClick={newGame}>
                         Nouvelle partie{" "}
                     </button>
                 </>
             ) : values.filter((val) => val === null).length === 0 && win === null ? (
                 <>
-                    <h1 style={{color: "#DC2626"}} >No winner 🚫</h1>
+                    <h1 style={{color: "#DC2626"}} >No winner</h1>
                     <button className="btnN" onClick={newGame}>
                         Nouvelle partie
                     </button>
