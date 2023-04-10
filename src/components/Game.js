@@ -91,7 +91,7 @@ export default function Game(props) {
                     <div className="container">
                         <div className="text-column">
                             <h1 style={{marginTop:"60px"}}>WELCOME TO TIC TAC TOE GAME</h1>
-                            <h5 style={{color:"white"}}>designed by AIT HAMMOU</h5>
+                            <h5 style={{color:"white"}}>Designed By AIT HAMMOU</h5>
                         </div>
                         <div className="buttons-column">
                             <button
@@ -106,7 +106,7 @@ export default function Game(props) {
                                 className="btn"
                                 onClick={() => setGameMode("play-vs-friend")}
                             >
-                                Play vs a  Friend
+                                Play vs Friend
                             </button>
                         </div>
 
